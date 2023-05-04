@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  string letters[2][4] = {
+    { "A", "B", "C", "D" },
+    { "E", "F", "G", "H" }
+  };
+
+  // Find the size of the array in bytes
+  int size_bytes = sizeof(letters);
+  cout << "Size of the letters array in bytes: " << size_bytes << endl;
+
+  // Find the number of elements in the array
+  int num_elements = sizeof(letters) / sizeof(string);
+  cout << "Number of elements in the letters array: " << num_elements << endl;
+
+  // Find the number of rows and columns in the array
+  int rows = sizeof(letters) / sizeof(letters[0]);
+  int cols = sizeof(letters[0]) / sizeof(string);
+  cout << "Number of rows in the letters array: " << rows << endl;
+  cout << "Number of columns in the letters array: " << cols << endl;
+
+  return 0;
+}
